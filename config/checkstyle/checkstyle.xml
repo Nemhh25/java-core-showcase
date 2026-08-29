@@ -4,67 +4,65 @@
         "https://checkstyle.org/dtds/configuration_1_3.dtd">
 
 <module name="Checker">
+
     <property name="charset" value="UTF-8"/>
     <property name="fileExtensions" value="java"/>
 
-    <!-- Verifica arquivos de teste também -->
+    <!-- Limite de linha -->
+    <module name="LineLength">
+        <property name="max" value="120"/>
+        <property name="ignorePattern"
+                  value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
+    </module>
+
     <module name="TreeWalker">
+
+        <!-- Imports não utilizados -->
+        <module name="UnusedImports"/>
+
         <!-- Nomes de classes/interfaces -->
         <module name="TypeName">
             <property name="format" value="^([A-Z][a-zA-Z0-9]*)+$"/>
-            <message>Nome de tipo deve estar em PascalCase.</message>
         </module>
 
         <!-- Nomes de métodos -->
         <module name="MethodName">
             <property name="format" value="^([a-z][a-zA-Z0-9]*)+$"/>
-            <message>Nome de método deve estar em camelCase.</message>
         </module>
 
-        <!-- Nomes de variáveis locais e campos -->
+        <!-- Nomes de variáveis locais -->
         <module name="LocalVariableName">
             <property name="format" value="^([a-z][a-zA-Z0-9]*)+$"/>
-            <message>Nome de variável local deve estar em camelCase.</message>
         </module>
 
+        <!-- Nomes de campos -->
         <module name="MemberName">
             <property name="format" value="^([a-z][a-zA-Z0-9]*)+$"/>
-            <message>Nome de campo deve estar em camelCase.</message>
         </module>
 
-        <!-- Constantes (static final) -->
+        <!-- Constantes -->
         <module name="ConstantName">
             <property name="format" value="^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$"/>
-            <message>Constantes devem ser UPPER_SNAKE_CASE.</message>
         </module>
 
-        <!-- Parâmetros de métodos -->
+        <!-- Parâmetros -->
         <module name="ParameterName">
             <property name="format" value="^([a-z][a-zA-Z0-9]*)+$"/>
-            <message>Parâmetro deve estar em camelCase.</message>
         </module>
 
-        <!-- Evita variáveis não usadas -->
-        <module name="UnusedImports"/>
-
-        <!-- Evita modificadores redundantes -->
+        <!-- Modificadores redundantes -->
         <module name="RedundantModifier"/>
 
-        <!-- Garante chaves em if/else/for/while -->
+        <!-- Obriga o uso de chaves -->
         <module name="NeedBraces"/>
 
-        <!-- Limite de linha (opcional, pode remover se quiser) -->
-        <module name="LineLength">
-            <property name="max" value="120"/>
-            <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-        </module>
-
-        <!-- Javadoc opcional para métodos públicos -->
+        <!-- Javadoc para métodos públicos -->
         <module name="JavadocMethod">
-            <property name="scope" value="public"/>
             <property name="allowMissingParamTags" value="true"/>
             <property name="allowMissingReturnTag" value="true"/>
             <property name="allowMissingThrowsTags" value="true"/>
         </module>
+
     </module>
+
 </module>
