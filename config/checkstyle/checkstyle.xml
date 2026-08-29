@@ -58,9 +58,9 @@
 
         <!-- Javadoc para métodos públicos -->
         <module name="JavadocMethod">
+            <property name="accessModifiers" value="public"/>
             <property name="allowMissingParamTags" value="true"/>
             <property name="allowMissingReturnTag" value="true"/>
-            <property name="allowMissingThrowsTags" value="true"/>
         </module>
 
     </module>
