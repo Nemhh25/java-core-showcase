@@ -41,7 +41,3 @@ spotless {
     }
 }
 
-checkstyle {
-    toolVersion = '10.21.0'
-    configFile = file('config/checkstyle/checkstyle.xml')
-}
