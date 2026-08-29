@@ -112,7 +112,7 @@ cd java-core-showcase
 ## 👨‍💻 Autor
 
 **Nemhh25** — Desenvolvedor Java / Minecraft Modder  
-[GitHub](https://github.com/nemhh25) • [LinkedIn](https://linkedin.com/in/nelsonlisboa])
+[GitHub](https://github.com/nemhh25) • [LinkedIn](https://linkedin.com/in/nelsonlisboa)
 
 ---
 
